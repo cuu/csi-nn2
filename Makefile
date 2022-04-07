@@ -20,7 +20,7 @@ nn2_c860:
 	cd source/; find . -name *.o | xargs rm; cd -
 
 nn2_c906:
-	DSP_LIB="libcsi_nn2_c906" CFLAGS="-march=rv64gcvxthead -mabi=lp64dv -DCSI_BUILD_C906 -DCSI_BUILD_REF -DCSI_BUILD_GREF $(EXTRA_CFLAGS)" \
+	DSP_LIB="libcsi_nn2_c906" CFLAGS="-march=rv64gcvxthead -mabi=lp64d -DCSI_BUILD_C906 -DCSI_BUILD_REF -DCSI_BUILD_GREF $(EXTRA_CFLAGS)" \
 	CROSS_COMPILE="riscv64-unknown-linux-gnu-" NN2_ROOT=${NN2_ROOT} make -C build_script/nn2_c906 -j8
 	cd source/; find . -name *.o | xargs rm; cd -
 
